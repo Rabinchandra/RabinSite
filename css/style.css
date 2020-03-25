@@ -1,0 +1,540 @@
+* {
+     /* border: 1px dotted red; */
+     /* -webkit-tap-highlight-color: rgba(); */
+     -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', 'Barlow', sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.top {
+    padding-bottom: 100px;
+    background-image: url('/backgrounds/bg-4.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.menu {
+    cursor: pointer;
+    width: 40px;
+    padding: 16px;
+    position: relative;
+    transition-duration: 1s;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.menu .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    margin-top: 5px;
+    background-color: #333;
+    transition-duration: 0.5s;
+}
+
+.bar1, .bar2 {
+    width: 40px;
+}
+
+.top-text {
+    font-family: 'Livvic';
+    padding: 50px;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.top-text .welcome {
+    margin-top: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 3px;
+    color: rgb(20, 20, 20);
+}
+
+.top-text .below-welcome {
+    padding: 3px;
+}
+
+.top-text button {
+    padding: 12px 20px;
+    margin-top: 25px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 0;
+    transition-property: background-color, border, color;
+    transition-duration: 0.3s;
+    background-color: transparent;
+    color: rgb(103, 26, 167);
+    border-color: rgb(75, 27, 165);
+    border: 2px solid rgba(75, 27, 165, 0.7);
+}
+
+.top-text button:hover {
+    border: 2px solid rgba(75, 27, 165, 0.055);
+    background-color: rgba(75, 27, 165, 0.801);
+    color: #fff;
+}
+
+.introduce {
+    padding: 20px 0px;
+    background-color: #37ade4;
+    color: #fff;
+    width: 100%;
+}
+
+.introduce .introduce-text {
+    width: 50%;
+    line-height: 1.5em;
+    text-align: center;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+.introduce b {
+    font-size: 1.5em;
+}
+
+.introduce b span {
+    color: rgb(230, 46, 46);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Details */
+
+.details {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+    text-align: center;
+    padding: 12px;
+}
+
+.details > div {
+    display: block;
+    position: relative;
+    padding: 2em 1em;
+    min-height: 230px;
+    cursor: pointer;
+    transition-property: color;
+    transition-duration: .6s;
+}
+
+.hover-box {
+    background-color: rgb(230, 21, 136);
+    transition-property: width;
+    transition-duration: .6s;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+}
+
+.details > div:hover .hover-box{
+    width: 100%;
+}
+
+.details > div:hover {
+    color: #fff;
+}
+
+
+
+.schoolanthem {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.schoolanthem:first-line {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.schoolanthem button {
+    margin-top: 15px;
+    border-width: 0px;
+    font-size: 16px;
+    padding: 16px;
+    background-image: linear-gradient(to right, rgb(128, 5, 128), rgb(218, 89, 218));
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition-property: opacity;
+    transition-duration: .4s;
+    font-family: 'Nanum Gothic';
+    outline: none;
+}
+
+.schoolanthem button:hover {
+    opacity: 0.8;
+}
+
+.anthem-text {
+    /*border: 1px dotted red;*/
+    transition-property: height, opacity;
+    transition-duration: .5s, .2s;
+    text-align: center;
+    /* padding: 30px 40px; */
+    height: 0px;
+    opacity: 0;
+    padding: 20px;
+    cursor: pointer;
+    z-index: -1;
+    line-height: 1.4em;
+    color: rgb(71, 71, 71);
+}
+
+.anthem-text span {
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 180px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.footer .ftext1 {
+    padding: 40px;
+    background-color: #0986ec;
+}
+
+.footer .ftext2{
+    padding: 70px;
+    background-color: rgb(36, 29, 78);
+}
+
+.footer .socialmedia {
+    padding: 12px;
+}
+
+.navbar {
+    position: fixed;
+    /* padding-top: 120px; */
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, white, rgb(204, 203, 203));
+    opacity: 0;
+    transition-duration: .3s;
+    font-family: Lobster;
+    z-index: 1;
+}
+
+.navbar > div {
+    padding: 30px;
+    transition-property: opacity;
+    transition-duration: 1s;
+    position: relative;
+    margin-top: 100px;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    transition-duration: 0.8s;
+}
+
+.navbar div:hover a {
+    opacity: 0.5;
+}
+
+.navbar div a:hover {
+    opacity: 1;
+    color: rgb(255, 51, 0);
+}
+
+.resStyle {
+    transition-duration: .6s;
+    background-color: red;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    z-index: 1;
+}
+
+.resStyle .bar1, .resStyle .bar3 {
+    transition-duration: 1s;
+    background-color: #fff;
+}
+
+.resStyle .bar1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.resStyle .bar2 {
+    opacity: 0;
+}
+
+.resStyle .bar3 {
+    transform: rotate(45deg) translate(-2px, -5px);
+}
+
+.menu-container {
+    /* border: 1px dotted red; */
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: transparent;
+    transition-property: top, background-color;
+    transition-duration: .5s, 1s;
+    border: none;
+    outline: 0;
+    z-index: 1;
+}
+
+/* Anthem Text when click design */
+.textdesign {
+    transition-duration: .5s;
+    opacity: 1;
+    height: 260px;
+}
+
+/* Removing blue dots on mobile */
+.d {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@media screen and (max-width: 700px) {
+    * {
+        /* border: 1px dotted red; */
+    }
+    .navbar > div {
+        margin-top: 40px;
+    }
+
+    .navbar > div a {
+        font-size: 2em;
+        padding: 20px;
+    }
+
+    .top {
+        height: 400px;
+    }
+
+    .introduce {
+      padding: 2em 0px;
+    }
+
+    .introduce .introduce-text {
+        font-size: 14px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .introduce::first-line {
+        font-size: 13px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    /* hover-box */
+    .details {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+
+    .details > div {
+        margin-top: 50px;
+        min-height: 150px;
+    }
+
+    .top-text {
+        padding: 0px;
+        /*position: relative;*/
+        top: 0px;
+        /* border: 1px dotted red; */
+    }
+
+    .top-text .welcome {
+        font-size: 30px;
+        padding: 0px;
+    }
+
+    .top-text .below-welcome {
+        font-size: 13px;
+    }
+
+    .menu-container {
+        z-index: 1;
+    }
+
+    .schoolanthem {
+        /* border: 3px dotted red; */
+        padding: 50px;
+    }
+}
+
+/* Gallery */
+
+.gallery-top {
+    background-image: url('/backgrounds/background.jpg');
+}
+
+.search-container {
+    padding: 100px 0px;;
+    line-height: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.search-container input[type="text"] {
+    font-family: 'Quicksand', sans-serif;
+    padding: 20px 30px;
+    font-size: 20px;
+    width: 300px;
+    border-radius: 5px;
+    border: 0px solid rgb(196, 195, 195);
+    outline: none;
+    height: 25px;
+}
+
+.search-container input[type="submit"] {
+    height: 65px;
+    padding: 20px 30px;
+    font-size: 20px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+.search-container input[type="submit"]:hover {
+    background-color: #49924b;
+}
+
+.search-container .search-text {
+    font-size: 32px;
+    padding: 30px;
+    color: rgba(255, 255, 255, 0.973);
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0,0,0,.9);
+}
+
+.photos-container {
+    margin-top: 50px;
+    padding: 0px;
+    text-align: center;
+}
+
+.photos-container div {
+    width: 40%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.photos-container img {
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px;
+    transition-property: transform, opacity;
+    transition-duration: .8s;
+    opacity: .8;
+    border-radius: 3px;
+}
+
+.photos-container img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+
+.image-resize-container {
+    padding: 0px;
+    min-height: 100px;
+}
+
+#imageresizer {
+    margin-top: 30px;
+    padding: 12px;
+    border: 0;
+    color: #fff;
+    background-image: linear-gradient(to right, rgb(206, 53, 142), rgb(179, 14, 110));
+    cursor: pointer;
+    transition-duration: .5s;
+    font-family: 'lobster', sans-serif;
+    font-size: 16px;
+    outline: none;
+    border:
+}
+
+
+#imageresizer:hover {
+    font-size: 18px;
+}
+
+.footer {
+    font-weight: bold;
+}
+
+
+.study-container {
+    /* border: 1px dotted red; */
+    padding: 18px;
+    padding-top: 100px;
+    /* margin-top: 100px; */
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.study-container a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(231, 52, 52);
+}
+
+@media screen and (max-width: 800px) {
+    .search-container {
+        padding: 0px;
+        padding-top: 100px;
+        width: 100%;
+    }
+    .search-container .search-text {
+        font-size: 18px;
+    }
+    .search-container input[type="text"] {
+        width: 200px;
+        font-size: 16px;
+    }
+    .search-container input[type="submit"] {
+        width: 100px;
+    }
+    .photos-container {
+        padding: 0px;
+    }
+    .photos-container div {
+        width: 45%;
+    }
+}

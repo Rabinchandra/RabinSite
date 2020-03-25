@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+.footer {
+    margin-top: 200px;
+    width: 100%;
+    z-index: -1;
+}
+.about {
+    text-align: center;
+    padding-top: 100px;
+    line-height: 1.5em;
+    width: 90%;
+    max-width: 400px;
+}
+
+.about center {
+    font-weight: bold;
+    z-index: -1;
+}
+
+.about blockquote {
+    font-family: 'Dancing Script', arial;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.about .text {
+    border-left:  6px solid rgb(22, 221, 138);
+    padding: 16px 1em;
+    font-family: 'Livvic';
+    /* font-style: italic; */
+    font-size: 1.2em;
+}
+
+.about img {
+    width: 150px;
+    height: auto;
+    transition: .6s;
+}
+
+.about img:hover {
+    opacity: 0.8;
+    cursor:pointer
+    color: #333;
+}
+
+.about i {
+    font-size: 3em;
+    transition-duration: 1s;
+    color: #333;
+}
+
+.about i:hover {
+    color: black
+}
+
+.about a {
+    padding: 12px;
+}
